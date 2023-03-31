@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></link>
+    <title>Weather Forecast</title>
+</head>    
+</html>
+<body> 
+    <!-- added header -->
+<header class="container-fluid text-center text-light bg-dark p-3">
+    <h1>Weather Forecast Dashboard</h1>
+</header>
+<!-- added div with classes for searching for cities -->
+<div class="container-fluid">
+    <div class="row">
+        <aside class="col-lg-3 bg-light">
+        <h2 class="mt-1">Search for a City!</h2>
+        <div class="form-group form-inline bg-light">
+            <input type="text" class="form-control" id="search-value" placeholder="Enter City Name">
+            <button type="search" class="btn btn-primary" id="search">Find City</button>
+        </div>
+        <ul class="list-group" id="search-history"></ul>    
+        </aside>
+
+        <div class="col-lg-9">
+            <div id="today" class="mt-3"></div>
+        </div>
+    </div>
+</div>
+    
+</body>
