@@ -8,8 +8,8 @@ searchBtn.addEventListener('click', function() {
   var city = searchCity.value;
   getWeather(city);
   getCurrent(city);
-  searchHistpryLS(city);
-  displaySearchHistory();
+  // searchHistpryLS(city);
+  // displaySearchHistory();
 });
 // this is the function that gets the weather data from the api for 5 days
 function getWeather(city) {
