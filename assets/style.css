@@ -8,3 +8,10 @@
 #container {
     height: 100vh;
 }
+
+#searchHistory {
+    background: #fff;
+    color: #000;
+    padding: 10px;
+    text-align: center;
+}

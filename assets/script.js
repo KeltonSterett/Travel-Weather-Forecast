@@ -8,6 +8,8 @@ searchBtn.addEventListener('click', function() {
   var city = searchCity.value;
   getWeather(city);
   getCurrent(city);
+  searchHistpryLS(city);
+  displaySearchHistory();
 });
 // this is the function that gets the weather data from the api for 5 days
 function getWeather(city) {
@@ -19,10 +21,6 @@ function getWeather(city) {
     .then(function(data) {
       FiveDayForecast.innerHTML = '';
       var weatherData = data.list[0];
-      // let firstFive = []
-      //   for(let i = 0; i < 40; i+=6){
-      //       firstFive.push(weatherData[0].list[i])
-      //   }
       var firstFive = data.list.slice(0, 5);
       // console.log(firstFive);
       firstFive.forEach(function(day){
@@ -113,15 +111,22 @@ function getCurrent(city) {
     })
 }
 
-// var displaySearchHistory = function() {
-//   var history = JSON.parse(localStorage.getItem('history'));
-//   if (history) {
-//     searchHistory.innerHTML = '';
-//     for (var i = 0; i < history.length; i++) {
-//       var city = history[i];
-//       var li = document.createElement('li');
-//       li.textContent = city;
-//       searchHistory.appendChild(li);
-//     }
-//   }
+// could not get this to work
+
+// // this is the function that saves the search history to local storage
+// function searchHistpryLS(city) {
+//   var searchHistorys = JSON.parse(localStorage.getItem('search-history')) || [];
+//   searchHistory.push(city);
+//   localStorage.setItem('search-history', JSON.stringify(searchHistory));
+//   displaySearchHistory();
+// }
+
+// // this displays the search history
+// function displaySearchHistory() {
+//   searchHistory.forEach(function(city) {
+//     var li = document.createElement('ul');
+//     li.classList.add('list-group-item');
+//     li.textContent = city;
+//     searchHistory.appendChild(li);
+//   });
 // }
